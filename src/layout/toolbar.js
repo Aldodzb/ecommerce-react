@@ -58,7 +58,11 @@ class Toolbar extends React.Component {
     return (
       <div id="layout">
         <Navbar type="dark" theme="primary" expand="md">
-          <NavbarBrand href="#">Odiazon</NavbarBrand>
+          <NavbarBrand>
+            <Link to="/" style={{ color: "white" }}>
+              Odiazon
+            </Link>
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} />
 
           <Collapse open={this.state.collapseOpen} navbar>
@@ -68,7 +72,9 @@ class Toolbar extends React.Component {
                   Active
                 </NavLink>*/}
                 <NavLink active>
-                  <Link to="/products">List</Link>
+                  <Link to="/products" style={{ color: "white" }}>
+                    View All Products
+                  </Link>
                 </NavLink>
               </NavItem>
               <NavItem>

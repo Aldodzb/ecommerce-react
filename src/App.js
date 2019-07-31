@@ -12,7 +12,7 @@ function App() {
     <div>
       <Toolbar />
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={Products} />
         <Route exact path="/products" component={Products} />
       </Switch>
     </div>
@@ -21,4 +21,4 @@ function App() {
 
 export default App;
 
-//       <Route path="/:id" component={UserPage} /> <Route exact path="/products" component={HomePage} />
+//       <Route path="/:id" component={UserPage} /> <Route exact path="/products" component={HomePage} /> <Route exact path="/" component={HomePage} />
