@@ -33,7 +33,7 @@ export default function HomePage() {
               <MDBView>
                 <img
                   className="d-block w-100"
-                  src={"/images/products1.png"}
+                  src={"images/products1.png"}
                   alt="First slide"
                 />
               </MDBView>
@@ -42,7 +42,7 @@ export default function HomePage() {
               <MDBView>
                 <img
                   className="d-block w-100"
-                  src={"/images/products2.png"}
+                  src={"images/products2.png"}
                   alt="Second slide"
                 />
               </MDBView>
@@ -51,7 +51,7 @@ export default function HomePage() {
               <MDBView>
                 <img
                   className="d-block w-100"
-                  src={"/images/products3.png"}
+                  src={"images/products3.png"}
                   alt="Third slide"
                 />
               </MDBView>

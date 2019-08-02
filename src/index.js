@@ -10,7 +10,7 @@ import "mdbreact/dist/css/mdb.css";
 /*ReactDOM.render(
 <App />, document.getElementById('root'));*/
 render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <App />
   </BrowserRouter>,
   document.querySelector("#root")

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./homepage/homepage.js";
 import Products from "./products/card-product";
 import Toolbar from "./layout/toolbar.js";
@@ -14,6 +14,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/products" component={Products} />
+        <Route exact path="*" component={HomePage} />
+        <Route component={HomePage} />
       </Switch>
     </div>
   );
