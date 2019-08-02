@@ -66,13 +66,26 @@ class Toolbar extends React.Component {
           <NavbarToggler onClick={this.toggleNavbar} />
 
           <Collapse open={this.state.collapseOpen} navbar>
-            <Nav navbar>
+            <Nav navbar style={{ width: "100%" }}>
+              <InputGroup seamless>
+                <InputGroupAddon type="prepend">
+                  <InputGroupText>
+                    <FontAwesomeIcon icon={faSearch} />
+                  </InputGroupText>
+                </InputGroupAddon>
+                <FormInput className="border-0" placeholder="Search..." />
+              </InputGroup>
+            </Nav>
+            <Nav navbar style={{ float: "left" }}>
               <NavItem>
                 {/*<NavLink active href="#">
                   Active
                 </NavLink>*/}
                 <NavLink active>
-                  <Link to="/products" style={{ color: "white" }}>
+                  <Link
+                    to="/products"
+                    style={{ color: "white", "white-space": "nowrap" }}
+                  >
                     View All Products
                   </Link>
                 </NavLink>
@@ -87,7 +100,7 @@ class Toolbar extends React.Component {
                 toggle={this.toggleDropdown}
               >
                 <DropdownToggle nav caret>
-                  Dropdown
+                  Account Info
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>Action</DropdownItem>
@@ -95,17 +108,6 @@ class Toolbar extends React.Component {
                   <DropdownItem>Something else here</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
-            </Nav>
-
-            <Nav navbar className="ml-auto">
-              <InputGroup size="sm" seamless>
-                <InputGroupAddon type="prepend">
-                  <InputGroupText>
-                    <FontAwesomeIcon icon={faSearch} />
-                  </InputGroupText>
-                </InputGroupAddon>
-                <FormInput className="border-0" placeholder="Search..." />
-              </InputGroup>
             </Nav>
           </Collapse>
         </Navbar>
