@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/ecommerce-react/static/css/main.bcd85937.chunk.css",
-    "main.js": "/ecommerce-react/static/js/main.63fe0ec9.chunk.js",
-    "main.js.map": "/ecommerce-react/static/js/main.63fe0ec9.chunk.js.map",
+    "main.css": "/ecommerce-react/static/css/main.9feab37c.chunk.css",
+    "main.js": "/ecommerce-react/static/js/main.f5d8db09.chunk.js",
+    "main.js.map": "/ecommerce-react/static/js/main.f5d8db09.chunk.js.map",
     "runtime~main.js": "/ecommerce-react/static/js/runtime~main.af09581d.js",
     "runtime~main.js.map": "/ecommerce-react/static/js/runtime~main.af09581d.js.map",
-    "static/css/2.7c81dee9.chunk.css": "/ecommerce-react/static/css/2.7c81dee9.chunk.css",
-    "static/js/2.751882fc.chunk.js": "/ecommerce-react/static/js/2.751882fc.chunk.js",
-    "static/js/2.751882fc.chunk.js.map": "/ecommerce-react/static/js/2.751882fc.chunk.js.map",
+    "static/css/2.ac1250ae.chunk.css": "/ecommerce-react/static/css/2.ac1250ae.chunk.css",
+    "static/js/2.af46e0ca.chunk.js": "/ecommerce-react/static/js/2.af46e0ca.chunk.js",
+    "static/js/2.af46e0ca.chunk.js.map": "/ecommerce-react/static/js/2.af46e0ca.chunk.js.map",
     "index.html": "/ecommerce-react/index.html",
-    "precache-manifest.83dc6e6854437218f819361a2a13659c.js": "/ecommerce-react/precache-manifest.83dc6e6854437218f819361a2a13659c.js",
+    "precache-manifest.de9008c2154e26d0b01797c3cd6b440a.js": "/ecommerce-react/precache-manifest.de9008c2154e26d0b01797c3cd6b440a.js",
     "service-worker.js": "/ecommerce-react/service-worker.js",
-    "static/css/2.7c81dee9.chunk.css.map": "/ecommerce-react/static/css/2.7c81dee9.chunk.css.map",
-    "static/css/main.bcd85937.chunk.css.map": "/ecommerce-react/static/css/main.bcd85937.chunk.css.map"
+    "static/css/2.ac1250ae.chunk.css.map": "/ecommerce-react/static/css/2.ac1250ae.chunk.css.map",
+    "static/css/main.9feab37c.chunk.css.map": "/ecommerce-react/static/css/main.9feab37c.chunk.css.map",
+    "static/media/mdb.css": "/ecommerce-react/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/all.min.css": "/ecommerce-react/static/media/fa-solid-900.f14c3b2f.ttf"
   }
 }
