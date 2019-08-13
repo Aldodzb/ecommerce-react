@@ -59,14 +59,15 @@ class Toolbar extends React.Component {
       <div id="layout">
         <Navbar type="dark" theme="primary" expand="md">
           <NavbarBrand>
-            <Link to="/" style={{ color: "white" }}>
+            {/*<Link to="/" style={{ color: "white" }}>
               Odiazon
-            </Link>
+            </Link>*/}
           </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} />
 
           <Collapse open={this.state.collapseOpen} navbar>
             <Nav navbar style={{ width: "100%" }}>
+              {/* SEARCH INPUT */}
               <InputGroup seamless>
                 <InputGroupAddon type="prepend">
                   <InputGroupText>
@@ -76,18 +77,19 @@ class Toolbar extends React.Component {
                 <FormInput className="border-0" placeholder="Search..." />
               </InputGroup>
             </Nav>
+
             <Nav navbar style={{ float: "left" }}>
               <NavItem>
                 {/*<NavLink active href="#">
                   Active
                 </NavLink>*/}
                 <NavLink active>
-                  <Link
+                  {/*<Link
                     to="/products"
                     style={{ color: "white", "white-space": "nowrap" }}
                   >
                     View All Products
-                  </Link>
+                  </Link>*/}
                 </NavLink>
               </NavItem>
               <NavItem>

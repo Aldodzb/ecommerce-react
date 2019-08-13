@@ -4,19 +4,27 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./homepage/homepage.js";
 import Products from "./products/card-product";
 import Toolbar from "./layout/toolbar.js";
-
 import "./App.css";
+
+import ToDO from "./pages/todo";
+import { Provider as ReduxProvider } from "react-redux";
+import configureStore from "./modules/store";
+
+const reduxStore = configureStore(window.REDUX_INITIAL_DATA);
 
 function App() {
   return (
     <div>
-      <Toolbar />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/products" component={Products} />
-        <Route exact path="*" component={HomePage} />
-        <Route component={HomePage} />
-      </Switch>
+      <ReduxProvider store={reduxStore}>
+        <Toolbar />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/products" component={Products} />
+          <Route exact path="/todo" component={ToDO} />
+          <Route exact path="*" component={HomePage} />
+          <Route component={HomePage} />
+        </Switch>
+      </ReduxProvider>
     </div>
   );
 }
