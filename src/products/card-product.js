@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import { Card, CardTitle, CardImg, CardBody, Button } from "shards-react";
 import "./card-product.css";
 

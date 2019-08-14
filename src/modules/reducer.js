@@ -2,7 +2,8 @@ import ACTIONS from "./action";
 import _ from "lodash";
 
 const defaultState = {
-  items: []
+  items: [],
+  products: []
 };
 
 const todoReducer = (state = defaultState, action) => {
@@ -21,6 +22,19 @@ const todoReducer = (state = defaultState, action) => {
       let newState = _.cloneDeep(state);
       let index = _.findIndex(newState.items, { id: action.payload });
       newState.items.splice(index, 1);
+      return newState;
+    }
+
+    case ACTIONS.Types.NEW_PRODUCT: {
+      let newState = _.cloneDeep(state);
+      let product = action.payload;
+      let newItem = {
+        id: state.items.length + 1,
+        title: product.title,
+        description: product.description,
+        price: product.price
+      };
+      newState.products.push(newItem);
       return newState;
     }
 

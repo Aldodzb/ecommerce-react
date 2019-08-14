@@ -59,9 +59,11 @@ class Toolbar extends React.Component {
       <div id="layout">
         <Navbar type="dark" theme="primary" expand="md">
           <NavbarBrand>
-            {/*<Link to="/" style={{ color: "white" }}>
-              Odiazon
-            </Link>*/}
+            {
+              <Link to="/" style={{ color: "white" }}>
+                Odiazon
+              </Link>
+            }
           </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} />
 
@@ -84,12 +86,12 @@ class Toolbar extends React.Component {
                   Active
                 </NavLink>*/}
                 <NavLink active>
-                  {/*<Link
+                  <Link
                     to="/products"
                     style={{ color: "white", "white-space": "nowrap" }}
                   >
                     View All Products
-                  </Link>*/}
+                  </Link>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -105,7 +107,9 @@ class Toolbar extends React.Component {
                   Account Info
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem>Action</DropdownItem>
+                  <DropdownItem>
+                    <Link to="/">Add Product</Link>
+                  </DropdownItem>
                   <DropdownItem>Another action</DropdownItem>
                   <DropdownItem>Something else here</DropdownItem>
                 </DropdownMenu>
