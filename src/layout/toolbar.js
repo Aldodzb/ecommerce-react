@@ -108,7 +108,7 @@ class Toolbar extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    <Link to="/">Add Product</Link>
+                    <Link to="/products/add">Add Product</Link>
                   </DropdownItem>
                   <DropdownItem>Another action</DropdownItem>
                   <DropdownItem>Something else here</DropdownItem>
