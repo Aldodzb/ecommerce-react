@@ -3,14 +3,25 @@ import _ from "lodash";
 
 const defaultState = {
   items: [],
-  products: []
+  products: [
+    {
+      title: "Aspiradora",
+      description:
+        "La nueva aspiradora Nappo ofrece un potente rendimiento gracias a sus 1500 Watts",
+      price: "2370"
+    },
+    {
+      title: "Prensa Tipo Sargento",
+      description:
+        "Prensa Tipo Sargento 50x250. Marca Davidson. Largo total 30cm. Envío a todo el país.",
+      price: "120"
+    }
+  ]
 };
 
 const todoReducer = (state = defaultState, action) => {
   switch (action.type) {
     case ACTIONS.Types.CREATE_ITEM: {
-      console.log(action);
-
       let item = action.payload;
       let newItem = { id: state.items.length + 1, description: item };
       let newState = _.cloneDeep(state);
@@ -29,12 +40,27 @@ const todoReducer = (state = defaultState, action) => {
       let newState = _.cloneDeep(state);
       let product = action.payload;
       let newItem = {
-        id: state.items.length + 1,
+        id: newState.products.length + 1,
         title: product.title,
         description: product.description,
         price: product.price
       };
       newState.products.push(newItem);
+      return newState;
+    }
+
+    default:
+      return state;
+  }
+};
+
+const productsReducer = (state = defaultState, action) => {
+  switch (action.type) {
+    case ACTIONS.Types.getAllProducts: {
+      let item = action.payload;
+      let newItem = { id: state.items.length + 1, description: item };
+      let newState = _.cloneDeep(state);
+      newState.items.push(newItem);
       return newState;
     }
 

@@ -95,25 +95,15 @@ class Toolbar extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#" disabled>
-                  {" "}
+                <NavLink active>
+                  <Link
+                    to="/products/add"
+                    style={{ color: "white", "white-space": "nowrap" }}
+                  >
+                    Add Product
+                  </Link>
                 </NavLink>
               </NavItem>
-              <Dropdown
-                open={this.state.dropdownOpen}
-                toggle={this.toggleDropdown}
-              >
-                <DropdownToggle nav caret>
-                  Account Info
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem>
-                    <Link to="/products/add">Add Product</Link>
-                  </DropdownItem>
-                  <DropdownItem>Another action</DropdownItem>
-                  <DropdownItem>Something else here</DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
             </Nav>
           </Collapse>
         </Navbar>

@@ -1,40 +1,20 @@
 import React from "react";
 import { Card, CardTitle, CardImg, CardBody, Button } from "shards-react";
 import "./card-product.css";
+import { connect } from "react-redux";
 
-export default function Products() {
-  var responseFromBackend = [
-    {
-      title: "product1",
-      description: "Description lorem 1",
-      imageUrl: ""
-    },
-    {
-      title: "product2",
-      description: "Description lorem 2",
-      imageUrl: ""
-    },
-    {
-      title: "product3",
-      description: "Description lorem 3",
-      imageUrl: ""
-    },
-    {
-      title: "product4",
-      description: "Description lorem 4",
-      imageUrl: ""
-    }
-  ];
+export function Products(props) {
+  var responseFromBackend = props.products;
   return (
     <div>
       <div id="container">
-        {responseFromBackend.map(el => (
+        {responseFromBackend.map(prod => (
           <Card id="cards">
             <CardImg src="https://place-hold.it/300x200" />
             <CardBody>
-              <CardTitle>{el.title}</CardTitle>
-              <p>{el.description}</p>
-              <Button>More &rarr;</Button>
+              <CardTitle>{prod.title}</CardTitle>
+              <p>{prod.description}</p>
+              <Button>$ {prod.price}</Button>
             </CardBody>
           </Card>
         ))}
@@ -42,3 +22,9 @@ export default function Products() {
     </div>
   );
 }
+
+const mapStateToProps = state => ({
+  products: state.products
+});
+
+export default connect(mapStateToProps)(Products);

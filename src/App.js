@@ -3,7 +3,7 @@ import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./homepage/homepage.js";
 import Products from "./products/card-product";
-import addProducts from "./products/add-product/add-product";
+import AddProducts from "./products/add-product/add-product";
 import Toolbar from "./layout/toolbar.js";
 import "./App.css";
 
@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/products" component={Products} />
           <Route exact path="/todo" component={ToDO} />
-          <Route exact path="/products/add" component={addProducts} />
+          <Route exact path="/products/add" component={AddProducts} />
           <Route exact path="*" component={HomePage} />
           <Route component={HomePage} />
         </Switch>

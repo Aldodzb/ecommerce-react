@@ -7,6 +7,7 @@ import Snackbar from "@material-ui/core/Snackbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { useDispatch } from "react-redux";
+import { connect } from "react-redux";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -29,12 +30,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function AddProducts() {
+export default function AddProducts(props) {
   const classes = useStyles();
   const dispatch = useDispatch();
   const [values, setValues] = React.useState(getEmptyProduct());
   const [open, setOpen] = React.useState(false);
   const [Snack, setSnack] = React.useState("");
+
+  const state = { products: "" };
 
   const handleChange = name => event => {
     setValues({ ...values, [name]: event.target.value });
@@ -72,6 +75,7 @@ export default function AddProducts() {
             id="standard-title"
             label="Title"
             className={classes.textField}
+            value={values.title}
             onChange={handleChange("title")}
             margin="normal"
           />
@@ -79,6 +83,7 @@ export default function AddProducts() {
             id="standard-description"
             label="Description"
             className={classes.textField}
+            value={values.description}
             onChange={handleChange("description")}
             margin="normal"
           />
@@ -86,6 +91,7 @@ export default function AddProducts() {
             id="standard-price"
             label="Price"
             className={classes.textField}
+            value={values.price}
             onChange={handleChange("price")}
             margin="normal"
           />
