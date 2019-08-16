@@ -5,12 +5,14 @@ const defaultState = {
   items: [],
   products: [
     {
+      id: 1,
       title: "Aspiradora",
       description:
         "La nueva aspiradora Nappo ofrece un potente rendimiento gracias a sus 1500 Watts",
       price: "2370"
     },
     {
+      id: 2,
       title: "Prensa Tipo Sargento",
       description:
         "Prensa Tipo Sargento 50x250. Marca Davidson. Largo total 30cm. Envío a todo el país.",
