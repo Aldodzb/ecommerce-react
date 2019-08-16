@@ -7,7 +7,6 @@ import Snackbar from "@material-ui/core/Snackbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { useDispatch } from "react-redux";
-import { connect } from "react-redux";
 
 const useStyles = makeStyles(theme => ({
   container: {

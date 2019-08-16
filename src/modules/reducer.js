@@ -16,7 +16,10 @@ const defaultState = {
         "Prensa Tipo Sargento 50x250. Marca Davidson. Largo total 30cm. Envío a todo el país.",
       price: "120"
     }
-  ]
+  ],
+  counters: {
+    newProducts: 2
+  }
 };
 
 const todoReducer = (state = defaultState, action) => {
@@ -45,7 +48,14 @@ const todoReducer = (state = defaultState, action) => {
         description: product.description,
         price: product.price
       };
+      newState.counters.newProducts++;
       newState.products.push(newItem);
+      return newState;
+    }
+
+    case ACTIONS.Types.REFRESH_UNSEEN: {
+      let newState = _.cloneDeep(state);
+      newState.counters.newProducts = 0;
       return newState;
     }
 
@@ -56,14 +66,6 @@ const todoReducer = (state = defaultState, action) => {
 
 const productsReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case ACTIONS.Types.getAllProducts: {
-      let item = action.payload;
-      let newItem = { id: state.items.length + 1, description: item };
-      let newState = _.cloneDeep(state);
-      newState.items.push(newItem);
-      return newState;
-    }
-
     default:
       return state;
   }

@@ -3,7 +3,8 @@ const Types = {
   CREATE_ITEM: "CREATE_ITEM",
   DELETE_ITEM: "DELETE_ITEM",
   NEW_PRODUCT: "NEW_PRODUCT",
-  GETALL_PRODUCT: "GETALL_PRODUCT"
+  GETALL_PRODUCT: "GETALL_PRODUCT",
+  REFRESH_UNSEEN: "REFRESH_UNSEEN"
 };
 // actions
 const createItem = task => ({
@@ -25,9 +26,14 @@ const getAllProducts = () => ({
   type: Types.GETALL_PRODUCT
 });
 
+const refreshUnseen = () => ({
+  type: Types.REFRESH_UNSEEN
+});
+
 export default {
   createItem,
   deleteItem,
   newProduct,
+  refreshUnseen,
   Types
 };
